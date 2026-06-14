@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shashi Sunder Rajan — Product Build Portfolio</title>
+  <meta name="description" content="Product build portfolio showcasing public prototypes across live data, geospatial intelligence, compliance, telco APIs, AI, and decision systems." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav">
+      <a class="brand" href="#top">Shashi Sunder Rajan</a>
+      <div class="nav-links">
+        <a href="#featured">Featured</a>
+        <a href="#case-studies">Case Studies</a>
+        <a href="#categories">Categories</a>
+        <a href="#resume">Resume</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Product • Data • Compliance • APIs • Decision Systems</p>
+        <h1>Product Build Portfolio</h1>
+        <p class="hero-text">
+          Working prototypes and case studies showing how I convert complex product problems into practical systems:
+          workflows, APIs, live-data interfaces, decision layers, and compliance-aware user experiences.
+        </p>
+        <div class="hero-actions">
+          <a class="button primary" href="#featured">View featured builds</a>
+          <a class="button secondary" href="https://github.com/ssunderrajan" target="_blank" rel="noreferrer">GitHub profile</a>
+        </div>
+      </div>
+
+      <aside class="hero-card">
+        <h2>What this portfolio shows</h2>
+        <ul>
+          <li>Product judgment beyond slides and documents.</li>
+          <li>Ability to build thin working prototypes.</li>
+          <li>API and data fluency across real-world signals.</li>
+          <li>Clear confidentiality boundaries for enterprise work.</li>
+        </ul>
+      </aside>
+    </section>
+
+    <section id="featured" class="section">
+      <div class="section-heading">
+        <p class="eyebrow">Featured public builds</p>
+        <h2>Live-data and geospatial intelligence</h2>
+        <p>
+          These two builds are the first public examples in this portfolio. They show how operational signals
+          can be converted into decision-support experiences.
+        </p>
+      </div>
+
+      <div class="project-grid">
+        <article class="project-card">
+          <div class="project-topline">
+            <span class="tag">Live Data</span>
+            <span class="tag">Mobility</span>
+            <span class="tag">Decision UX</span>
+          </div>
+          <h3>Singapore Mobility Decision View</h3>
+          <p>
+            A mobile-first prototype that combines public taxi, transport, road, and disruption signals
+            into pickup readiness and fallback mobility choices.
+          </p>
+          <dl class="project-meta">
+            <div><dt>Problem</dt><dd>Should a user book now, walk to a better pickup point, switch to MRT/bus, or wait?</dd></div>
+            <div><dt>Built with</dt><dd>FastAPI, JavaScript, Mapbox GL JS, LTA DataMall, Render</dd></div>
+            <div><dt>Product decision</dt><dd>Uses public signals and explainable proxies; does not claim private ride-hailing data.</dd></div>
+          </dl>
+          <div class="card-actions">
+            <a href="https://github.com/ssunderrajan/singapore-grab-mobility-view" target="_blank" rel="noreferrer">GitHub repo</a>
+            <a href="#mobility-case">Case study</a>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-topline">
+            <span class="tag">Streaming</span>
+            <span class="tag">Maritime</span>
+            <span class="tag">Map UX</span>
+          </div>
+          <h3>Singapore Port Traffic Tracker</h3>
+          <p>
+            A real-time maritime visibility prototype that ingests live AIS vessel signals and presents
+            Singapore Strait vessel movement, vessel categories, and traffic indicators.
+          </p>
+          <dl class="project-meta">
+            <div><dt>Problem</dt><dd>How can dense vessel movement be made visible and operationally understandable?</dd></div>
+            <div><dt>Built with</dt><dd>FastAPI, JavaScript, Mapbox GL JS, AISStream, Render</dd></div>
+            <div><dt>Product decision</dt><dd>Turns raw vessel position data into a simple traffic-awareness layer.</dd></div>
+          </dl>
+          <div class="card-actions">
+            <a href="https://github.com/ssunderrajan/singapore-port-tracker" target="_blank" rel="noreferrer">GitHub repo</a>
+            <a href="#port-case">Case study</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="case-studies" class="section muted">
+      <div class="section-heading">
+        <p class="eyebrow">Case studies</p>
+        <h2>How the builds are framed</h2>
+        <p>
+          Each project is written as a product case study, not only as a code repository. That makes the page useful for
+          hiring managers who want to understand how I think.
+        </p>
+      </div>
+
+      <article id="mobility-case" class="case-card">
+        <h3>Singapore Mobility Decision View</h3>
+        <div class="case-layout">
+          <div>
+            <h4>Context</h4>
+            <p>
+              In dense cities, users do not only need transport data. They need a practical decision:
+              book now, walk to a better pickup point, switch to public transport, or wait.
+            </p>
+            <h4>Product hypothesis</h4>
+            <p>
+              Public taxi, transit, road, and disruption signals can be combined into a lightweight,
+              explainable decision layer for mobility choices.
+            </p>
+            <h4>Key decisions</h4>
+            <ul>
+              <li>Use public mobility data only.</li>
+              <li>Avoid claims about private platform pricing, demand, or driver allocation.</li>
+              <li>Keep API keys server-side.</li>
+              <li>Avoid persistent user-location storage.</li>
+              <li>Use explainable proxy scoring instead of black-box prediction.</li>
+            </ul>
+          </div>
+          <div class="architecture-box">
+            <h4>Architecture</h4>
+            <pre>User location
+  ↓
+Frontend map UI
+  ↓
+FastAPI backend
+  ↓
+LTA DataMall APIs
+  ↓
+Taxi / road / transit signals
+  ↓
+Scoring layer
+  ↓
+Pickup readiness + fallback choice</pre>
+          </div>
+        </div>
+      </article>
+
+      <article id="port-case" class="case-card">
+        <h3>Singapore Port Traffic Tracker</h3>
+        <div class="case-layout">
+          <div>
+            <h4>Context</h4>
+            <p>
+              Raw vessel movement signals are difficult to interpret without a clear operational map,
+              simple categories, and live status indicators.
+            </p>
+            <h4>Product hypothesis</h4>
+            <p>
+              Live AIS vessel signals can be transformed into a lightweight visibility product for vessel
+              movement, vessel categories, and traffic awareness.
+            </p>
+            <h4>Key decisions</h4>
+            <ul>
+              <li>Use live AIS streaming data.</li>
+              <li>Separate backend data ingestion from frontend map rendering.</li>
+              <li>Expose signal status so users understand whether live data is flowing.</li>
+              <li>Present vessel type and traffic metrics in a simple interface.</li>
+            </ul>
+          </div>
+          <div class="architecture-box">
+            <h4>Architecture</h4>
+            <pre>AISStream WebSocket
+  ↓
+FastAPI backend
+  ↓
+Vessel cache + status cache
+  ↓
+/ships + /metrics APIs
+  ↓
+Mapbox frontend
+  ↓
+Live vessel map + traffic indicators</pre>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <section id="categories" class="section">
+      <div class="section-heading">
+        <p class="eyebrow">Scalable portfolio structure</p>
+        <h2>Future project categories</h2>
+        <p>
+          The portfolio title is broad on purpose. New projects can be added under these categories without changing the site.
+        </p>
+      </div>
+
+      <div class="category-grid">
+        <article><h3>Live Data & Geospatial Intelligence</h3><p>Mobility, maritime, traffic, operational maps, public APIs, and real-time signals.</p></article>
+        <article><h3>Compliance, KYC & Risk Systems</h3><p>Workflow controls, evidence handling, review queues, auditability, and regulatory operations.</p></article>
+        <article><h3>AI & Document Intelligence</h3><p>Invoice extraction, validation, confidence scoring, exception handling, and review loops.</p></article>
+        <article><h3>Telco & Communications APIs</h3><p>Voice, SMS, RCS, WhatsApp, sender identity, registration flows, and communications workflows.</p></article>
+      </div>
+    </section>
+
+    <section id="resume" class="section resume-section">
+      <div class="section-heading">
+        <p class="eyebrow">Resume-ready summary</p>
+        <h2>How this portfolio should be referenced</h2>
+      </div>
+
+      <div class="resume-box">
+        <h3>Resume link</h3>
+        <p><strong>Portfolio:</strong> https://ssunderrajan.github.io</p>
+        <h3>Selected Product Builds bullet</h3>
+        <p>
+          Built and hosted product prototypes across live-data, mobility, maritime, compliance, telco, and
+          decision-intelligence use cases, including FastAPI/Mapbox apps using LTA DataMall and AISStream.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© <span id="year"></span> Shashi Sunder Rajan. Public builds and product case studies.</p>
+    <p><a href="https://github.com/ssunderrajan" target="_blank" rel="noreferrer">GitHub</a></p>
+  </footer>
+
+  <script src="projects.js"></script>
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
+</html>

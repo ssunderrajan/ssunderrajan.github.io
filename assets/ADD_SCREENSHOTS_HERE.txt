@@ -1,0 +1,10 @@
+Add screenshots here later.
+
+Recommended file names:
+
+mobility-desktop.png
+mobility-mobile.png
+port-desktop.png
+port-mobile.png
+
+Then add <img> tags in index.html under each project card or case study.
